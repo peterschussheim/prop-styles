@@ -1,0 +1,8 @@
+☐ add tests
+☐ Automate releases using `semantic-release`
+☐ Setup continuous integration
+☐ Setup husky to handle tasks prior to commits
+☐ Use `babel` for build process
+☐ export a `default` module
+☐ add explaination in README of why I like this style
+☐ add inspiration sources
