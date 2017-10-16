@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/peterschussheim/prop-styles/issues"
   },
-  "homepage": "https://github.com/peterschussheim/prop-styles#readme"
+  "homepage": "https://github.com/peterschussheim/prop-styles#readme",
+  "devDependencies": {
+    "flow-bin": "0.57.3",
+    "jest": "21.2.1"
+  }
 }
