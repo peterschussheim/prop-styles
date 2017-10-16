@@ -1,6 +1,6 @@
 {
   "name": "prop-styles",
-  "version": "1.0.1",
+  "version": "1.0.1-beta.0",
   "description":
     "Utility to make it easier to create a glamorous component which accepts props to enable/disable certain styles.",
   "main": "src/index.js",
