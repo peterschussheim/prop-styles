@@ -1,7 +1,8 @@
 {
   "name": "prop-styles",
-  "version": "1.0.0",
-  "description": "Utility to make it easier to create a glamorous component which accepts props to enable/disable certain styles.",
+  "version": "1.0.1",
+  "description":
+    "Utility to make it easier to create a glamorous component which accepts props to enable/disable certain styles.",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/peterschussheim/prop-styles.git"
   },
-  "keywords": [
-    "styles"
-  ],
-  "author": "Peter Schussheim <peter@schussheim.com> (https://peterschussheim.com/)",
+  "keywords": ["styles"],
+  "author":
+    "Peter Schussheim <peter@schussheim.com> (https://peterschussheim.com/)",
   "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/peterschussheim/prop-styles/issues"
