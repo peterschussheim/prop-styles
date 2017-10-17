@@ -1,9 +1,9 @@
 ☐ add tests
-☐ Automate releases using `semantic-release`
-☐ exclude /src from npm package
+☐ add explaination in README of why I like this style
+☐ add inspiration sources
+✔ Automate releases using `semantic-release` @done (10/17/2017, 2:32:27 PM)
+✔ exclude /src from npm package @done (10/17/2017, 2:32:24 PM)
 ✔ Setup continuous integration @done (10/17/2017, 1:46:37 PM)
 ✔ Use `babel` for build process @done (10/17/2017, 1:46:30 PM)
 ✔ export a `default` module @done (2017-10-17 10:36:48)
 ✔ use `commitizen` @done (2017-10-17 10:37:05)
-☐ add explaination in README of why I like this style
-☐ add inspiration sources
