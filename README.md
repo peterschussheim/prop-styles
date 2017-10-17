@@ -1,5 +1,7 @@
 # prop-styles
 
+[![Build Status](https://travis-ci.org/peterschussheim/prop-styles.svg?branch=master)](https://travis-ci.org/peterschussheim/prop-styles)
+
 Utility to make it easier to create a glamorous component which accepts props to enable/disable certain styles.
 
 ---
