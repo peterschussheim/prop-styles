@@ -1,8 +1,8 @@
 ☐ add tests
 ☐ Automate releases using `semantic-release`
-☐ Setup continuous integration
-☐ Setup husky to handle tasks prior to commits
-☐ Use `babel` for build process
+☐ exclude /src from npm package
+✔ Setup continuous integration @done (10/17/2017, 1:46:37 PM)
+✔ Use `babel` for build process @done (10/17/2017, 1:46:30 PM)
 ✔ export a `default` module @done (2017-10-17 10:36:48)
 ✔ use `commitizen` @done (2017-10-17 10:37:05)
 ☐ add explaination in README of why I like this style
