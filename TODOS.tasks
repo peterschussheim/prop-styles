@@ -3,6 +3,7 @@
 ☐ Setup continuous integration
 ☐ Setup husky to handle tasks prior to commits
 ☐ Use `babel` for build process
-☐ export a `default` module
+✔ export a `default` module @done (2017-10-17 10:36:48)
+✔ use `commitizen` @done (2017-10-17 10:37:05)
 ☐ add explaination in README of why I like this style
 ☐ add inspiration sources

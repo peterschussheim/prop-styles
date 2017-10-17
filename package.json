@@ -1,32 +1,43 @@
 {
   "name": "prop-styles",
   "version": "0.0.0-semantically-released",
-  "description": "Utility to make it easier to create a glamorous component which accepts props to enable/disable certain styles.",
-  "main": "src/index.js",
+  "description":
+    "Utility to create a glamorous component which accepts props to enable/disable certain styles.",
+  "main": "lib/index.js",
   "scripts": {
+    "build": "babel src -d lib",
+    "start": "yarn build",
     "commit": "git-cz",
-    "test": "jest",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "test": "jest --coverage",
+    "semantic-release":
+      "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/peterschussheim/prop-styles.git"
   },
-  "keywords": [
-    "styles"
-  ],
-  "author": "Peter Schussheim <peter@schussheim.com> (https://peterschussheim.com/)",
+  "keywords": ["styles"],
+  "author":
+    "Peter Schussheim <peter@schussheim.com> (https://peterschussheim.com/)",
   "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/peterschussheim/prop-styles/issues"
   },
   "homepage": "https://github.com/peterschussheim/prop-styles#readme",
   "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-jest": "21.2.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-stage-2": "6.24.1",
+    "babel-register": "6.26.0",
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.0.0",
     "flow-bin": "0.57.3",
-    "jest": "21.2.1",
+    "jest-cli": "21.2.1",
     "semantic-release": "^8.2.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"

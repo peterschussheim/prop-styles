@@ -15,7 +15,7 @@
  * @return {Function} the dynamic styles function
  */
 
-function propStyles(styles) {
+export default function propStyles(styles) {
   return function dynamicStyles(props) {
     return Object.keys(props).map(key => {
       if (props[key]) {
@@ -26,8 +26,4 @@ function propStyles(styles) {
       return null
     })
   }
-}
-
-module.exports = {
-  propStyles
 }
