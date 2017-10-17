@@ -1,26 +1,34 @@
 {
   "name": "prop-styles",
-  "version": "1.0.1-beta.0",
-  "description":
-    "Utility to make it easier to create a glamorous component which accepts props to enable/disable certain styles.",
+  "version": "0.0.0-semantically-released",
+  "description": "Utility to make it easier to create a glamorous component which accepts props to enable/disable certain styles.",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest"
+    "commit": "git-cz",
+    "test": "jest",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/peterschussheim/prop-styles.git"
+    "url": "https://github.com/peterschussheim/prop-styles.git"
   },
-  "keywords": ["styles"],
-  "author":
-    "Peter Schussheim <peter@schussheim.com> (https://peterschussheim.com/)",
+  "keywords": [
+    "styles"
+  ],
+  "author": "Peter Schussheim <peter@schussheim.com> (https://peterschussheim.com/)",
   "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/peterschussheim/prop-styles/issues"
   },
   "homepage": "https://github.com/peterschussheim/prop-styles#readme",
   "devDependencies": {
+    "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.0.0",
     "flow-bin": "0.57.3",
-    "jest": "21.2.1"
+    "jest": "21.2.1",
+    "semantic-release": "^8.2.0"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
