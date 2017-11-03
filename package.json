@@ -1,8 +1,10 @@
 {
   "name": "prop-styles",
   "version": "2.0.0",
-  "description": "Utility to create a glamorous component which accepts props to enable/disable certain styles.",
-  "author": "Peter Schussheim <peter@schussheim.com> (https://peterschussheim.com/)",
+  "description":
+    "Utility to create flexible React components which accepts props to enable/disable certain styles.",
+  "author":
+    "Peter Schussheim <peter@schussheim.com> (https://peterschussheim.com/)",
   "license": "AGPL-3.0",
   "main": "lib/index.js",
   "scripts": {
@@ -10,18 +12,15 @@
     "build": "babel --copy-files --out-dir lib src",
     "start": "yarn build",
     "commit": "git-cz",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release":
+      "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/peterschussheim/prop-styles.git"
   },
-  "files": [
-    "lib"
-  ],
-  "keywords": [
-    "styles"
-  ],
+  "files": ["lib"],
+  "keywords": ["styles", "css", "glamorous", "styled-components"],
   "bugs": {
     "url": "https://github.com/peterschussheim/prop-styles/issues"
   },
@@ -32,7 +31,7 @@
     "babel-preset-stage-2": "6.24.1",
     "babel-register": "6.26.0",
     "commitizen": "2.9.6",
-    "cz-conventional-changelog": "2.0.0",
+    "cz-conventional-changelog": "2.1.0",
     "rimraf": "2.6.2",
     "semantic-release": "^8.2.0"
   },
