@@ -1,18 +1,20 @@
 # prop-styles
 
-[![Travis](https://img.shields.io/travis/peterschussheim/prop-styles.svg?style=flat-square)](https://travis-ci.org/peterschussheim/prop-styles)
-
 Utility to create flexible React components which accepts props to enable/disable certain styles.
 
 ---
+
+[![Travis](https://img.shields.io/travis/peterschussheim/prop-styles.svg?style=flat-square)](https://travis-ci.org/peterschussheim/prop-styles)
+
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/QBvQQkqUs7HakSKkUvJpfRwq/peterschussheim/prop-styles'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/QBvQQkqUs7HakSKkUvJpfRwq/peterschussheim/prop-styles.svg' />
+</a>
 
 - [prop-styles](#prop-styles)
   - [Why](#why)
   - [This Solution](#this-solution)
   - [Installation](#installation)
   - [Usage](#usage)
-    - [Example: `glamorous`](#example-glamorous)
-    - [Example: `styled-components`](#example-styled-components)
   - [Inspiration](#inspiration)
   - [License](#license)
 
@@ -37,33 +39,166 @@ This package is distributed via [npm](https://www.npmjs.com/) which is bundled w
 
 ## Usage
 
-### Example: `glamorous`
+<details>
+<summary>
+Example using glamorous, without ThemeProvider
+</summary>
 
-Usage with [💄`glamorous`💄](https://glamorous.rocks).
+[Live demo](https://codesandbox.io/s/kx3q8kmx17)
+
+This is a minimal example of `prop-styles` usage with `glamorous`:
+
+
+```javascript
+import React from 'react'
+import { render } from 'react-dom'
+import glamorous, { Div } from 'glamorous'
+import propStyles from 'prop-styles'
+
+const button = {
+  fontSize: 16,
+  margin: 10,
+  border: 'none',
+  cursor: 'pointer',
+  display: 'inline-block',
+  padding: '10px 20px',
+  textAlign: 'center',
+  transition: '0.25s cubic-bezier(0.17, 0.67, 0.52, 0.97)',
+  borderRadius: 0,
+  color: '#fff',
+  boxShadow: '0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08)',
+  ':hover': {
+    opacity: 0.7,
+    transform: 'translateY(-1px)',
+    boxShadow: '0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08)'
+  },
+  ':focus': { outline: 0 },
+  ':active': {
+    transform: 'translateY(1px)'
+  }
+}
+
+const small = {
+  padding: '8px 16px'
+}
+
+const large = {
+  padding: '12px 24px'
+}
+
+const colors = {
+  success: '#29A88E',
+  danger: '#C65F4A',
+  primary: '#6DCFD3',
+  info: '#FFD035',
+  gray: '#5A6E73',
+  accent: '#8E83A3'
+}
+
+const Button = glamorous.button(
+  button,
+  propStyles({
+    success: success => ({ backgroundColor: colors.success }),
+    danger: danger => ({ backgroundColor: colors.danger }),
+    primary: primary => ({ backgroundColor: colors.primary }),
+    info: info => ({ backgroundColor: colors.info }),
+    gray: gray => ({ backgroundColor: colors.gray }),
+    accent: accent => ({ backgroundColor: colors.accent }),
+    small: [button, small, { fontSize: 12 }],
+    large: [button, large, { fontSize: 18 }]
+  })
+)
+
+function App() {
+  return (
+    <Div>
+      <Div>
+        <Button small success>
+          Success
+        </Button>
+        <Button small danger>
+          Danger
+        </Button>
+        <Button small primary>
+          Primary
+        </Button>
+        <Button small info>
+          Info
+        </Button>
+        <Button small gray>
+          Gray
+        </Button>
+        <Button small accent>
+          Accent
+        </Button>
+      </Div>
+      <Div>
+        <Button success>Success</Button>
+        <Button danger>Danger</Button>
+        <Button primary>Primary</Button>
+        <Button info>Info</Button>
+        <Button gray>Gray</Button>
+        <Button accent>Accent</Button>
+      </Div>
+      <Div>
+        <Button large success>
+          Success
+        </Button>
+        <Button large danger>
+          Danger
+        </Button>
+        <Button large primary>
+          Primary
+        </Button>
+        <Button large info>
+          Info
+        </Button>
+        <Button large gray>
+          Gray
+        </Button>
+        <Button large accent>
+          Accent
+        </Button>
+      </Div>
+    </Div>
+  )
+}
+
+render(<App />, document.getElementById('root'))
+```
+</details>
+
+<details>
+<summary>
+Example with glamorous
+</summary>
 
 [Live demo](https://codesandbox.io/s/92m6q0krqr)
 
+Similar to the example above, this sample shows how `prop-styles` and `glamorous` `ThemeProvider` work together:
+
 ```javascript
-import React from "react";
-import { render } from "react-dom";
-import glamorous, { ThemeProvider } from "glamorous";
-import propStyles from "prop-styles";
+import React from "react"
+import { render } from "react-dom"
+import glamorous, { ThemeProvider } from "glamorous"
+import propStyles from "prop-styles"
 
 const heading = {
   display: "block",
   fontFamily: "inherit",
   fontWeight: "500",
   lineHeight: "1.1"
-};
+}
+
 const largerHeading = {
   marginTop: "20px",
   marginBottom: "10px"
-};
+}
 
 const smallerHeading = {
   marginTop: "10px",
   marginBottom: "10px"
-};
+}
 
 // shoutout to https://seek-oss.github.io/seek-style-guide/typography/
 const Text = glamorous.span(
@@ -77,7 +212,7 @@ const Text = glamorous.span(
     standard: [heading, smallerHeading, { fontSize: 14 }],
     substandard: [heading, smallerHeading, { fontSize: 12 }]
   })
-);
+)
 
 function App() {
   return (
@@ -100,15 +235,17 @@ function App() {
         </Text>
       </glamorous.Div>
     </ThemeProvider>
-  );
+  )
 }
 
 render(<App />, document.getElementById("root"));
 ```
+</details>
 
-### Example: `styled-components`
-
-Usage with [`styled-components`](https://www.styled-components.com/).
+<details>
+<summary>
+Example with styled-components
+</summary>
 
 [Live demo](https://codesandbox.io/s/10ml2qn394)
 
@@ -173,6 +310,7 @@ function App() {
 
 render(<App />, document.getElementById('root'))
 ```
+</details>
 
 ## Inspiration
 
