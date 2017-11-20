@@ -6,10 +6,6 @@ Utility to create flexible React components which accepts props to enable/disabl
 
 [![Travis](https://img.shields.io/travis/peterschussheim/prop-styles.svg?style=flat-square)](https://travis-ci.org/peterschussheim/prop-styles)
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/QBvQQkqUs7HakSKkUvJpfRwq/peterschussheim/prop-styles'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/QBvQQkqUs7HakSKkUvJpfRwq/peterschussheim/prop-styles.svg' />
-</a>
-
 - [prop-styles](#prop-styles)
   - [Why](#why)
   - [This Solution](#this-solution)
