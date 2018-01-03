@@ -1,5 +1,7 @@
 # prop-styles
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/peterschussheim/prop-styles.svg)](https://greenkeeper.io/)
+
 Utility to create flexible React components which accepts props to enable/disable certain styles.
 
 ---
